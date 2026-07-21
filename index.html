@@ -598,12 +598,12 @@
       <div class="contact-card">
         <div class="contact-icon">&#128231;</div>
         <h4>电子邮件</h4>
-        <span>2273647433@qq.com</span>
+        <span data-protect="MjI3MzY0NzQzM0BxcS5jb20=">[保护中，加载中…]</span>
       </div>
       <div class="contact-card">
         <div class="contact-icon">&#128222;</div>
         <h4>电话</h4>
-        <span>136 8285 8738</span>
+        <span data-protect="MTM2IDgyODUgODczOA==">[保护中，加载中…]</span>
       </div>
       <div class="contact-card">
         <div class="contact-icon">&#128205;</div>
@@ -613,7 +613,7 @@
       <div class="contact-card">
         <div class="contact-icon">&#128172;</div>
         <h4>微信</h4>
-        <span>L13682858738</span>
+        <span data-protect="TDEzNjgyODU4NzM4">[保护中，加载中…]</span>
       </div>
     </div>
   </div>
@@ -622,7 +622,7 @@
 <!-- ===== Footer ===== -->
 <footer>
   <div class="thread-line"></div>
-  <p>&copy; 2026 黎爱平 · 印染纺织工程师</p>
+  <p>&copy; 2026 黎爱平 · 染整事业部经理</p>
 </footer>
 
 <!-- ===== Scripts ===== -->
@@ -637,6 +637,15 @@
     link.addEventListener('click', () => {
       document.getElementById('navLinks').classList.remove('open');
     });
+  });
+
+  // Decode protected contact info (anti-scraping)
+  document.querySelectorAll('[data-protect]').forEach(el => {
+    try {
+      el.textContent = atob(el.getAttribute('data-protect'));
+    } catch(e) {
+      // fallback: keep placeholder
+    }
   });
 
   // Fade-in on scroll
