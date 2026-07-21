@@ -321,6 +321,30 @@
   .timeline-item .company { font-size: 0.95rem; color: var(--tan); font-weight: 600; margin-bottom: 8px; }
   .timeline-item p { font-size: 0.9rem; color: #6B5E4E; line-height: 1.8; }
 
+  /* ===== Achievements ===== */
+  .achievements-section { background: var(--white); }
+  .achieve-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    gap: 20px;
+  }
+  .achieve-card {
+    display: flex; gap: 20px; align-items: flex-start;
+    padding: 28px; border-radius: var(--radius);
+    background: var(--cream);
+    border-left: 4px solid var(--indigo);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .achieve-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+  .achieve-num {
+    flex-shrink: 0;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--indigo); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.2rem; font-weight: 800;
+  }
+  .achieve-body h4 { font-size: 1.05rem; color: var(--indigo-dark); margin-bottom: 6px; font-weight: 700; }
+  .achieve-body p { font-size: 0.9rem; color: #6B5E4E; line-height: 1.8; }
+
   /* ===== Contact Section ===== */
   .contact-section { background: var(--indigo-dark); color: white; }
   .contact-section .section-label { color: var(--tan-light); }
@@ -382,6 +406,7 @@
     .skills-grid { grid-template-columns: 1fr; }
     .about-stats { grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .stat-num { font-size: 1.5rem; }
+    .achieve-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -396,7 +421,8 @@
       <li><a href="#about">关于我</a></li>
       <li><a href="#skills">专业能力</a></li>
       <li><a href="#experience">工作经历</a></li>
-      <li><a href="#contact">联系方式</a></li>
+      <li><a href="#achievements">核心业绩</a></li>
+	      <li><a href="#contact">联系方式</a></li>
     </ul>
     <button class="menu-toggle" id="menuToggle" aria-label="菜单">&#9776;</button>
   </div>
@@ -506,7 +532,7 @@
   <div class="section-inner">
     <span class="section-label">Experience</span>
     <h2 class="section-title">工作经历</h2>
-    <p class="section-desc">深耕印染纺织行业的技术之路</p>
+    <p class="section-desc">十九年扎根一家企业，从技术到管理的全面积淀</p>
     <div class="timeline fade-in">
       <div class="timeline-item">
         <div class="timeline-year">2007.01 — 至今</div>
@@ -518,6 +544,45 @@
         英国高温高压中央集控染色机、台湾全自动滴料机、意大利高频烘干机等国际一流设备。
         建立并完善从打样到量产的全流程品控体系，推动产品通过瑞士 Oeko-Tex Standard 100
         欧盟环保认证及 ISO9001 认证，持续服务李宁、CK 等国内外一线品牌。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Achievements ===== -->
+<section class="achievements-section" id="achievements">
+  <div class="section-inner">
+    <span class="section-label">Key Results</span>
+    <h2 class="section-title">核心业绩</h2>
+    <p class="section-desc">十九年染整生涯的关键成果</p>
+    <div class="achieve-grid fade-in">
+      <div class="achieve-card">
+        <div class="achieve-num">01</div>
+        <div class="achieve-body">
+          <h4>品牌供应链色丝开发</h4>
+          <p>主导李宁、CK 等国内外一线品牌专属色丝的开发与量产，配色打样一次成功率从行业平均 70% 提升至 90% 以上，色差 ΔE 值稳定控制在品牌方严苛标准以内，助力公司成为多家品牌长期战略供应商。</p>
+        </div>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-num">02</div>
+        <div class="achieve-body">
+          <h4>高色牢度工艺技术攻关</h4>
+          <p>针对锦纶高弹丝深色系列色牢度行业共性难题，带领团队历时数月反复试验，通过优化染料配伍组合与染色升温曲线，成功将深黑色、大红色等高难度色号的耐水洗色牢度提升至 4-5 级，达到国际品牌采购标准。</p>
+        </div>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-num">03</div>
+        <div class="achieve-body">
+          <h4>进口设备产能效率提升</h4>
+          <p>对英国高温高压中央集控染色机进行工艺参数系统性优化，重新设计染色升温曲线与保温时间窗口，在保证染色品质不变的前提下，单缸染色周期平均缩短 15%，在不增加设备投资的情况下年产能提升近 500 吨。</p>
+        </div>
+      </div>
+      <div class="achieve-card">
+        <div class="achieve-num">04</div>
+        <div class="achieve-body">
+          <h4>国际认证与品控体系建设</h4>
+          <p>全面主导瑞士 Oeko-Tex Standard 100 欧盟环保标准认证及 ISO9001 质量管理体系的工厂端落地执行，建立从原料进厂到成品出库的全流程品控节点，实现连续三年品牌客户质量投诉率同比下降，为公司拓展国际市场奠定合规基础。</p>
+        </div>
       </div>
     </div>
   </div>
